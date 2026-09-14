@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chrome Cookie 本地同步</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>Cookie 本地同步</h1>
+      <p>启用后，Chrome 登录、续期和退出会自动同步到本机渐进阅读服务。</p>
+      <button id="toggle-live" type="button">启用持续同步</button>
+      <button id="sync-now" type="button">立即同步到导入服务</button>
+      <output id="live-status" aria-live="polite">正在读取同步状态…</output>
+      <hr>
+      <p>也可单独导出一份快照到下载目录：</p>
+      <p class="warning">输出是本地敏感凭据文件，请勿上传、分享或提交。</p>
+      <button id="sync" type="button">同步全部 Cookie 到本地</button>
+      <output id="status" aria-live="polite">尚未读取 Cookie。</output>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Cookie 本地同步",
+  "version": "1.1.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnSEBoxLaOAipu4EKpjxMD1Vx4uR4ByLttDRmvziCPiDmHt67IzNc3wFZfohTAV03uoZt4hIg3OA0IyltQ98W/fDwQap/9ji3b2HfvChoxIh0k39EN1EN8yIqGNb4ukGAuGtz9+ItCWSIa7qDi3LG1Resf5GBskkiQOI4G+RqDIwveg08guN1gYEAC6fizZPU/ePZUPsqdWhqHecyGkzK1alKcbx2fA3UdhNxuznmhBGlK2Z9idAiwMpr09ia55sbyz4UC8xMf4KXUPSnZYUbt77sw6shyo9oAM7XPmzlFXKXj8b/9k2RmtbWg27Tbm2sJAJuF4ipKqgDgvU+vC0WDwIDAQAB",
+  "description": "手动导出本地 Cookie；启用后将当前 Chrome 登录态持续同步给本机渐进阅读导入服务。",
+  "minimum_chrome_version": "119",
+  "incognito": "not_allowed",
+  "permissions": [
+    "cookies",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "同步全部 Chrome Cookie 到本地"
+  }
+}

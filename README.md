@@ -2,7 +2,6 @@
 
 协作开发、Agent 提交与合并规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-
 Chrome 官方 Cookie API 的本地凭据同步工具。当前活动源码迁自工作区中的 `04 Projects/Chrome Cookie Sync`；旧目录只保留历史取证用途。
 
 手动导出继续独立运行。自动同步使用渐进阅读的本机凭据接口，保持浏览器中的更新、过期与退出一致。真实凭据只进入专用应用数据目录，不进入源码、日志或 Git。
@@ -26,7 +25,7 @@ Chrome 官方 Cookie API 的本地凭据同步工具。当前活动源码迁自�
 
 配套服务真实 HTTP 合成验收：`D:\Artifacts\ProgressiveReading\web-import\fixture-gs6rMc\cookie-live-acceptance.json`。它使用本项目同步核心，核验受保护网页导入与正式文件哈希、服务新进程恢复、退出及热更新，不读取真实 Chrome Cookie。
 
-2026-09-14 当前真实 Chrome 自动化入口报 `nodeRepl.fetch request failed`，尚未加载此版本或启用持续同步；上述合成验收不能替代实际网站登录与知乎专栏 Canary。
+真实 Chrome 持续同步已于 2026-09-14 启用并通过专栏 7/7 篇验收。2026-09-15 同步复发的原因是共享服务的 Bot 启动器误设手动快照模式；扩展仍在每分钟重试，接收配置修复后无需重装或点击即恢复。最新运行证据与网站访问边界见 `D:\Projects\渐进阅读工作流\docs\CHROME_LOGIN_SYNC.md`。
 
 旧 `DIAGNOSIS.md` 和 `SNAPSHOT-CONTRACT.md` 保留历史合同。v1 JSON 字段不变；自动模式新增持久接收方，手动下载依然可独立使用。工作区旧目录未删除或覆盖，不再作为新版本开发根。
 
